@@ -1,4 +1,5 @@
-QT = core
+QT = core \
+    widgets
 
 CONFIG += c++17 cmdline
 
@@ -7,7 +8,10 @@ CONFIG += c++17 cmdline
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp
+        library.cpp \
+        main.cpp \
+        statistics.cpp \
+        zeus.cpp
 
 FORMS += \
     ../../SEM3/OOPS/244 Lokesh/227 Kartik Verma/Zeus/zeus.ui \
@@ -20,4 +24,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 FORMS +=
 
-HEADERS +=
+HEADERS += \
+    library.h \
+    statistics.h \
+    zeus.h
